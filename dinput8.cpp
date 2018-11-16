@@ -19,7 +19,7 @@ HRESULT WINAPI DirectInput8Create(HINSTANCE hinst, DWORD dwVersion, REFIID riidl
 		*ppvOut = new DirectInput8ProxyA(pDInput);
 
 	}	
-	// Redirect ANSI
+	// Redirect UNICODE
 	else
 	{
 		MessageBox(NULL, ("DirectInput8CreateW"), ("UNICODE!"), NULL);
