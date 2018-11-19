@@ -14,7 +14,6 @@ HRESULT WINAPI DirectInput8Create(HINSTANCE hinst, DWORD dwVersion, REFIID riidl
 	// Redirect ANSI
 	if (IsEqualIID(riidltf, IID_IDirectInput8A))
 	{
-		MessageBox(NULL, ("DirectInput8CreateA"), ("ANSI!"), NULL);
 		IDirectInput8A * pDInput = (IDirectInput8A *)*ppvOut;
 		*ppvOut = new DirectInput8ProxyA(pDInput);
 
@@ -22,7 +21,6 @@ HRESULT WINAPI DirectInput8Create(HINSTANCE hinst, DWORD dwVersion, REFIID riidl
 	// Redirect UNICODE
 	else
 	{
-		MessageBox(NULL, ("DirectInput8CreateW"), ("UNICODE!"), NULL);
 		IDirectInput8W * pDInput = (IDirectInput8W *)*ppvOut;
 		*ppvOut = new DirectInput8ProxyW(pDInput);
 
