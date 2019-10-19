@@ -54,6 +54,12 @@ bool WINAPI DllMain(HMODULE hModule, DWORD fdwReason, LPVOID lpReserved) {
 	{
 	case DLL_PROCESS_ATTACH:
 	{
+	
+		if (MH_Initialize() != MH_OK)
+		{
+			MessageBox(NULL, ("Error"), ("MagicHook"), MB_OK);
+			return 1;
+		}
 
 		char path[MAX_PATH];
 		GetSystemDirectory(path, MAX_PATH);
