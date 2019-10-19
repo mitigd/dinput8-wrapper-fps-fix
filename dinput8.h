@@ -19,3 +19,14 @@ typedef HRESULT(WINAPI *tEnumDevicesA)(
 
 tEnumDevicesA oEnumDevicesA;
 tEnumDevicesA pEnumDevicesA;
+
+typedef HRESULT(WINAPI *tEnumDevicesW)(
+	LPDIRECTINPUT8W			 This,
+	DWORD					 dwDevType,
+	LPDIENUMDEVICESCALLBACKW lpCallback,
+	LPVOID				     pvRef,
+	DWORD					 dwFlags);
+
+
+tEnumDevicesW oEnumDevicesW;
+tEnumDevicesW pEnumDevicesW;
