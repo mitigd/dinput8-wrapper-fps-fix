@@ -57,7 +57,7 @@ bool WINAPI DllMain(HMODULE hModule, DWORD fdwReason, LPVOID lpReserved) {
 	
 		if (MH_Initialize() != MH_OK)
 		{
-			MessageBox(NULL, ("Error"), ("MagicHook"), MB_OK);
+			MessageBox(NULL, ("Error"), ("Dinput-FPS-Fix"), MB_OK);
 			return 1;
 		}
 
